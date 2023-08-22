@@ -1,13 +1,7 @@
-Welcome to Lumache's documentation!
-===================================
+Welcome to Cedar-Sinai Medical Center Data Science Navigation team's Galaxy documentation!
+=========================================================================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+In this tutorial, the user will be guided through using a workflow in the Cedars-Sinai Galaxy instance. This workflow is for RNA-seq analysis, and covers Primary, Secondary and Tertiary analysis. In Galaxy, there are two workflows, "RNA-seq Primary analysis" which covers Primary and secondary analysis and "RNA-seq Tertiary analysis" which covers tertiary analysis.
 
 .. note::
 
@@ -17,6 +11,12 @@ Contents
 --------
 
 .. toctree::
+    :depth: 2
 
-   usage
-   api
+   RNA-seq introduction
+   Quick-start
+   Primary analysis/index.rst
+   Secondary analysis/index.rst
+   Tertiary analysis/index.rst
+   Supplementary files/index.rst
+   Conclusion
