@@ -2,11 +2,11 @@
 =====================================
   
 
-Let's start with the first step of Primary analysis which is conducting a Quality check and read processing. Through the steps, this tutorial will explain the meaning of each step, the inputs and outputs which will be useful if you are running each step seperately or running the workflow. 
+Let's start with the first step of Primary analysis which is conducting a Quality check and read processing. Through the steps, this tutorial will explain the meaning of each step, the inputs and outputs which will be useful if you are running each step separately or running the workflow. 
 
-For users of the workflow, let's start with the "RNA-seq Primary analysis" workflow. 
+For users of the workflow, let's start with the "RNA-seq Primary analysis single-end" workflow. 
 
-* From the homepage, navigate to "Workflow" and scroll down to "RNA-seq Primary analysis"
+* From the homepage, navigate to "Workflow" and scroll down to "RNA-seq Primary analysis single-end"
 
 * Provide the collection of fastq files that you created in the previous step from the dropdown menu under "Flatten collection" and "Create a collection of input files". This step is just providing input to the tools within the workflow
 
@@ -14,7 +14,7 @@ For users of the workflow, let's start with the "RNA-seq Primary analysis" workf
 
 For users running each step - 
 
-* The paired dataset collection created in the previous step can be provided to the tool - FastQC, but only after converting the list of pairs into a simple list
+* The single-end collection created in the previous step can be provided to the tool - FastQC, but only after converting the collection of items into a simple list
 
 * The flatten collection tool is pre-installed in Galaxy and can be used to convert the output for FastQC
 
@@ -22,7 +22,7 @@ For users running each step -
 
 * Run the tool and the output automatically saves to the history and can be easily provided to the FastQC tool
 
-* Find FastQC in the toolshed on the left handside and launch the tool
+* Find FastQC in the toolshed on the left side and launch the tool
 
 * Provide the output of "Flatten collection" tool to the FastQC tool and run
 
