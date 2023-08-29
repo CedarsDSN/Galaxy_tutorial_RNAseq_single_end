@@ -4,7 +4,7 @@
 
 Let's start with the first step of Primary analysis which is conducting a Quality check and read processing. Through the steps, this tutorial will explain the meaning of each step, the inputs and outputs which will be useful if you are running each step separately or running the workflow. 
 
-For users of the workflow, let's start with the "RNA-seq Primary analysis single-end" workflow. 
+**For users of the workflow** - let's start with the "RNA-seq Primary analysis single-end" workflow. 
 
 * From the homepage, navigate to "Workflow" and scroll down to "RNA-seq Primary analysis single-end"
 
@@ -12,7 +12,7 @@ For users of the workflow, let's start with the "RNA-seq Primary analysis single
 
 * The tool that will run the first step i.e. Quality check is FastQC and you don't have to provide any values under FastQC. We will be using the default values
 
-For users running each step - 
+**For users running each step** - 
 
 * The single-end collection created in the previous step can be provided to the tool - FastQC, but only after converting the collection of items into a simple list
 
