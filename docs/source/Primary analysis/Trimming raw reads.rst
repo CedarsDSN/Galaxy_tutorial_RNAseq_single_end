@@ -5,9 +5,11 @@ Reads should be trimmed to get rid of bases that were sequenced with high uncert
 
 **For workflow users** - 
 
-* The Galaxy workflow is set up to be used for single-end reads. If you have paired-end reads please refer to this `tutorial <https://galaxy-tutorial.readthedocs.io/en/latest/>`_ -
+* The Galaxy workflow is set up to be used for single-end reads. If you have paired-end reads please refer to this `tutorial <https://galaxy-tutorial.readthedocs.io/en/latest/>`_ 
 
-* All other settings are default and no user input has to be entered at this step. For further explanation of the default parameters, those are explained below for users who are running each step separately
+* Under "Read 1 options", under "5' or 3' (Anywhere) Adapters", select the file "adapter.fa" from your history (To obtain the adapter file, please go to "Quick-start" and follow the instructions under Primary analysis point no. 10). If you have your own set of adapters you want to use, upload the file under the current history and provide it here instead
+
+* Under "Read 2 options", under "5' or 3' (Anywhere) Adapters", select the file "adapter.fa" from your history. Same as before, if you have your own set of adapters you want to use, upload the file under the current history and provide it here instead
 
 * The next tool i.e. MultiQC has default parameters and the user doesn't need to enter anything
 
@@ -46,11 +48,11 @@ The next step is optional, but can be run to get more insights into your sample 
 
 * Click "Run"
 
-The output of MultiQC on Cutadapt results should contain a webpage which can be accessed from the history and downloaded to be viewed -
+The output of MultiQC on Cutadapt results should contain a webpage that can be accessed from the history and downloaded to be viewed -
 
-* The first table on the webpage shows the percentage of the basepairs which have been trimmed by Cutadapt
+* The first table on the webpage shows the percentage of the basepairs that have been trimmed by Cutadapt
 
-* The plot below that shows the number of reads (SE) / pairs (PE) which have been removed by Cutadapt
+* The plot below that shows the number of reads that have been removed by Cutadapt
 
 
 You are now ready to go to the next step, Alignment/mapping
