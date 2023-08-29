@@ -22,11 +22,16 @@ Reads should be trimmed to get rid of bases that were sequenced with high uncert
    
    
 **For users running each step** - 
+
 Cutadapt tool is used but there are other tools too such as Trimmomatic, BBDuk, TrimGalore, etc. Here are the steps to run Cutadapt -
 
 * On the left-hand side of the homepage, search for "CutAdapt" and open up the tool
 
 * Select whether your sequences are single-ended, pair-ended, or a pair-ended collection 
+
+* Under "Read 1 options", under "5' or 3' (Anywhere) Adapters", select the file "adapter.fa" from your history (To obtain the adapter file, please go to "Quick-start" and follow the instructions under Primary analysis point no. 10). If you have your own set of adapters you want to use, upload the file under the current history and provide it here instead
+
+* Under "Read 2 options", under "5' or 3' (Anywhere) Adapters", select the file "adapter.fa" from your history. Same as before, if you have your own set of adapters you want to use, upload the file under the current history and provide it here instead
 
 * In "Filter options", enter 20 under "Minimum length (R1)" which specifies the minimum length that the adapter needs to be in order to be trimmed
 
