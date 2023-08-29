@@ -37,11 +37,11 @@ This tutorial will go into the details of each step and the inputs and outputs f
 
 .. note::
 
-  1. The "RNA-seq Primary analysis" workflow is designed for single-end data. If you would like to run RNA-seq analysis on your paired-end data, please use the DSN Galaxy documentation for the same.
+  1. The "RNA-seq Primary analysis" workflow is designed for single-end data. If you would like to run RNA-seq analysis on your paired-end data, please use the DSN Galaxy `documentation <https://galaxy-tutorial.readthedocs.io/en/latest/>'_ for the same.
 
-  2. For users who need to run this tutorial with their data and need to run differential expression analysis, only run this "RNA-seq Tertiary" workflow if you have one factor that you know can contribute to differences in gene expression (for example treatment  and sequencing type)
+  2. For users who need to run this tutorial with their data and need to run differential expression analysis, only run this "RNA-seq Tertiary" workflow if you have one factor that you know can contribute to differences in gene expression (for example treatment)
 
-  3. For users who have fewer or more factors that they think may affect the gene expression, it would be better to use the "RNA-Seq Primary analysis" workflow and then run each step of "RNA-seq Tertiary Analysis single factor final version" workflow on their own so they can change the number of factors 
+  3. For users who have more than one factor that they think may affect the gene expression, it would be better to use the "RNA-Seq Primary analysis" workflow and then run each step of the "RNA-seq Tertiary Analysis single factor final version" workflow on their own so they can change the number of factors 
 
   4. For all the workflows, until all the inputs have been entered and each step is discussed, do not click on the "Run workflow" button
 
