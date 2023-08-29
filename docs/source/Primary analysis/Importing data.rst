@@ -12,8 +12,6 @@
 * Check all those that you would like to include in your analysis like below
 
 .. image:: /images/Naming_datasets_single.png
-   :width: 200
-   :height: 275
    :alt: Choosing datasets
 
 * Click "For all selected" and choose "Build Dataset List"
