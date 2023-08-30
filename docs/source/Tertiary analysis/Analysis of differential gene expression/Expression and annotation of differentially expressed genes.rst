@@ -19,6 +19,7 @@ For users that are running the workflow, these are the tools that would output a
 At this stage, the user only has to enter a file for the fourth step - "Attaching a header to the DESeq2 output". After the DESeq2 annotated tables have been generated, they do not contain column names. The tables need to have column names in order to be used by the tools that use them next. You would need a header file. 
 
 .. figure:: /images/header.png
+   :height: 100
    :alt: Show header
    
    Screenshot showing which tool needs input for the header file
