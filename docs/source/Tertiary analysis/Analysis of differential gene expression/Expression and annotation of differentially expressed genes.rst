@@ -15,35 +15,43 @@ For users that are running the workflow, these are the tools that would output a
 
 * Concatenate datasets
 
-At this stage, the user only has to enter a file for the fourth step - "Attaching a header to the DESeq2 output". After the DESeq2 annotated tables have been generated, they do not contain column names. The tables need to have column names in order to be used by the tools that use them next. You would need a header file. For the header file, download the file (Above “History”, click on the three dots and download the file) from `this page <https://github.com/CedarsDSN/Galaxy_tutorial/blob/main/docs/source/header.txt>`_ and upload the file to Galaxy using instructions from `here <https://galaxy-tutorial.readthedocs.io/en/latest/Supplementary%20files/Creating%20a%20data%20file/>`_.
+**For users running the workflow** -
+At this stage, the user only has to enter a file for the fourth step - "Attaching a header to the DESeq2 output". After the DESeq2 annotated tables have been generated, they do not contain column names. The tables need to have column names in order to be used by the tools that use them next. You would need a header file. 
 
-For users running the workflow, you can read further down this page if you would like to know how the other tools work and what they do (This will also show you the default parameters)
+.. figure:: /images/header.png
+   :alt: Show header
+   
+   Screenshot showing which tool needs input for the header file
 
-For users running each step or running the secondary analysis seperately, the steps are delineated below -
+For the header file, download the file (Above “History”, click on the three dots and download the file) from `this page <https://github.com/CedarsDSN/Galaxy_tutorial_RNAseq_single_end/blob/main/docs/source/header.txt>`_ and upload the file to Galaxy using instructions from `here <https://galaxy-tutorial-rnaseq-single-end.readthedocs.io/en/latest/Supplementary%20files/Creating%20a%20data%20file.html>`_.
+
+You can read further down this page if you would like to know how the other tools work and what they do (This will also show you the default parameters)
+
+**For users running each step**, the steps are delineated below -
 
 The first tool that is used is "Filter data on any column using simple expressions"
 
-* This tool is used to extract genes with. significant change in gene expression (adjusted p-value < 0.05) between two levels of a factor (treated and untreated samples)
+* This tool is used to extract genes with a significant change in gene expression (adjusted p-value < 0.05) between two levels of a factor (treated and untreated samples)
 
 * Search for the tool under "Tools" 
 
 * Select the output from DESeq2 from history under "Filter"
 
-* Under "With following condition", input "c7<0.05" (Filter the file on the seventh column with threshold of 0.05 where the column represents adjusted p-value)
+* Under "With following condition", input "c7<0.05" (Filter the file on the seventh column with a threshold of 0.05 where the column represents adjusted p-value)
 
 * Click on "Execute"
 
 * Rename the file as "Genes with significant adj p-value"
 
-The second tool that that will be used is "Filter"
+The second tool that will be used is "Filter"
 
 * This tool is used to select only the genes with a fold change (FC) > 2 or FC < 0.5 (or log2 FC >1)
 
-* Select for the tool under "Tools"
+* Select the tool under "Tools"
 
 * Select the file "Genes with significant adj p-value" under "Filter"
 
-* Under "With following condition", input "abs(c3)>1" (Filter the file on the absolute value of the third column which is the log2 FC with threshold of 1)
+* Under "With following condition", input "abs(c3)>1" (Filter the file on the absolute value of the third column which is the log2 FC with a threshold of 1)
 
 * Click on execute
 
@@ -65,7 +73,7 @@ The next tool that is used is "Annotate DESeq2/DEXSeq output tables"
 
 * Before executing this tool, a header has to be added to the annotated DESeq2 file so that downstream tools can use it
 
-* The steps to make a new file which has the columns of the header are at the top of this page 
+* The steps to make a new file that has the columns of the header are at the top of this page 
 
 * Once the header is created, select "Concatenate datasets" under tools
 
