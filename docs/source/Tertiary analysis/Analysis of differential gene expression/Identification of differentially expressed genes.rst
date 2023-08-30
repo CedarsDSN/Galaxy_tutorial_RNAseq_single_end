@@ -3,15 +3,16 @@
 
 If you want to learn more about the DESeq2 model and how it works, please refer to the `paper <https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8>`_. The Galaxy DESeq2 tool is designed to accept as many factors as the user wants to add, along with levels for each factor. For example, a factor could be treatment and the factor levels could be treated and un-treated. Moving forward from the count table obtained from featureCounts, the table needs to be in a format that can be understood by DESeq2 in order to carry out normalization and differential gene expression. 
 
-If you used the "RNA-seq Primary analysis" workflow, you should have the output from featureCounts in the history from the earlier workflow on the right hand side of the homepage. This counts collection would be under "featureCounts on collection N: Counts" and this contains counts for each sample under a different table. If you didn't run the "RNA-seq Primary analysis" workflow, and you would like to use an example dataset for the "RNA-seq Tertiary analysis" workflow, download the counts from `here <https://zenodo.org/record/4541751>`_. 
+If you used the "RNA-seq Primary analysis" workflow, you should have the output from featureCounts in the history from the earlier workflow on the right-hand side of the homepage. This counts collection would be under "featureCounts on collection N: Counts" and this contains counts for each sample under a different table. If you didn't run the "RNA-seq Primary analysis" workflow, and you would like to use an example dataset for the "RNA-seq Tertiary analysis" workflow, follow the instructions `here <https://galaxy-tutorial-rnaseq-single-end.readthedocs.io/en/latest/Tertiary%20analysis/Importing%20data/Importing%20example%20data%20for%20running%20Tertiary%20Analysis.html>`_. 
 
 .. note::
 
-  1. The "RNA-seq Tertiary analysis" workflow has DESeq2 tool setup so that it can take in two factors, each with two factor levels. If you have less or more factors, consider running each step of the pipeline rather than the workflow.
-  2. If downloading the example datasets from `Zenodo <https://zenodo.org/record/4541751>`_, download the files ending with .counts. These are the files that you can upload to Galaxy and run the "RNA-seq Tertiary analysis" workflow
+  1. The "RNA-seq Tertiary analysis" workflow has DESeq2 tool setup so that it can take in one factor, with two factor levels. If you have two or more factors, consider running each step of the pipeline rather than the workflow.
 
 
-For users running the "RNA-seq Tertiary analysis" workflow, navigate to the "Workflows" tab and scroll down to the "RNA-seq Tertiary analysis" workflow. Below are the steps that help identify differentially expressed genes. The four tools that is required for identification of differentially expressed features (genes in our case) are as follows -
+**For users running the workflow**
+
+Navigate to the "Workflows" tab and scroll down to the "RNA-seq Tertiary analysis" workflow. Below are the steps that help identify differentially expressed genes. The four tools that are required for the identification of differentially expressed features (genes in our case) are as follows -
 
 * Extract element identifiers 
 
@@ -21,7 +22,9 @@ For users running the "RNA-seq Tertiary analysis" workflow, navigate to the "Wor
 
 * DESeq2
 
-For the first three tools, the user doesn't need to enter any values as everything is pre-entered when creating the workflow. However, the most important thing to note at this step is the factors to be entered within the DESeq2 tool. The steps to do this are -
+For the first three tools, the user doesn't need to enter any values as everything is pre-entered when creating the workflow. However, the most important thing to note at this step is the factors to be entered within the DESeq2 tool. 
+
+**Setting up DESeq2** -
 
 * Scroll down to the DESeq2 part of the workflow and click the edit button next to "Specify a factor name, e.g. effects_drug_x or cancer_markers"
 
@@ -33,7 +36,7 @@ For the first three tools, the user doesn't need to enter any values as everythi
 
 * This allows you to edit the "FactorLevel"
 
-* Enter the first factor level that correspond to this "FactorName" (For example, treated)
+* Enter the first factor level that corresponds to this "FactorName" (For example, treated)
 
 * In the textbox under "Select groups that correspond to this factor level", select the factor level tag that is attached to your samples (For example, since my samples are xxx_treat, I would enter treat here. 
 
@@ -47,14 +50,14 @@ For the first three tools, the user doesn't need to enter any values as everythi
 
 * If you have batch factors that you know would affect your model, upload a tabular file with the factors that you would like to include (Note: This file is optional and could be produced by other tools like RUVseq or svaseq)
 
-The output of this step will be explained in the next page. For users running the workflow, you can read further down this page if you would like to know how the other three tools work and what they do.
+The output of this step will be explained on the next page. For users running the workflow, you can read further down this page if you would like to know how the other three tools work and what they do.
 
 
-For users running each step seperately, let's get into the nitty-gritties of identifying differentially expressed features (genes in our case) -
+**For users running each step separately** let's get into the nitty-gritty of identifying differentially expressed features (genes in our case) -
 
-The first tool that is used is "Extract element identifers"
+The first tool that is used is "Extract element identifiers"
 
-* The tool takes in the output of featureCounts "all counts" which should show up in your history on the right hand side
+* The tool takes in the output of featureCounts "all counts" which should show up in your history on the right-hand side
 
 * In the dropdown menu, select "all counts" and click "Execute"
 
@@ -96,7 +99,7 @@ The fourth tool that is used is "DESeq2"
 
 * Search for the tool under "Tools" and under the first dropdown, select "Select group tags corresponding to levels"
 
-* Select the output of "Tag elements" tool in the dropdown menu under "Count file(s) collection"
+* Select the output of the "Tag elements" tool in the dropdown menu under "Count file(s) collection"
 
 * Click on "+ Insert Factor"
 
@@ -110,12 +113,12 @@ The fourth tool that is used is "DESeq2"
 
 * Insert more factor levels using the "+ Insert Factor level" (For example, untreated and the corresponding tag - "Tags: untreat")
 
-* Repeat this procedure of adding factors and corresponding factor levels for as many factors you have 
+* Repeat this procedure of adding factors and corresponding factor levels for as many factors as you have 
 
-* Under "Files have header?", choose No
+* Under "Files have a header?", choose No
 
-* Under "Choice of Input data", select "Count data (e.g. from HTSeq-count, featureCounts or StringTie)"
+* Under "Choice of Input data", select "Count data (e.g. from HTSeq-count, featureCounts, or StringTie)"
 
-* Expand "Output Options", select "Generate plots for visualizing the analysis results" and "Output normalised counts" and click "Execute"
+* Expand "Output Options", select "Generate plots for visualizing the analysis results" and "Output normalized counts" and click "Execute"
 
-The output of this step will be explained in the next page.
+The output of this step will be explained on the next page.
