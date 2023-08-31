@@ -25,7 +25,7 @@ With these parameters, "goseq" generates three outputs -
 
 * A table with the differentially expressed genes associated to the GO terms
 
-.. figure:: /images/top_over-represented_go_terms.png
+.. figure:: /images/goseq_single.png
    :width: 600
    :alt: Top over represented GO terms
    
