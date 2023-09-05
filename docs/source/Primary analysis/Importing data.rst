@@ -5,7 +5,7 @@
 
   For users conducting the "Quick-start", please refer to the steps below to create a collection of your input FASTQ files
 
-* Upload all your fastq files using the "Upload data" on the left upper-hand corner on the Galaxy homepage (If your file is above 10GB, please use these `instructions <https://galaxy-tutorial.readthedocs.io/en/latest/Primary%20analysis/Importing%20large%20data/>`_)
+* Upload all your fastq files using the "Upload data" on the left upper-hand corner on the Galaxy homepage (If your file is above 10GB, please use these `instructions <https://galaxy-tutorial-rnaseq-single-end.readthedocs.io/en/latest/Primary%20analysis/Importing%20large%20data.html>`_)
 
 * These files should appear in your history on the right-hand side. Click on the checkbox and a checkbox will appear in front of every file
 
