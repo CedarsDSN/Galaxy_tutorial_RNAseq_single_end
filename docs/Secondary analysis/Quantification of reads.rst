@@ -3,15 +3,15 @@
 
 Both STAR and FeatureCounts can be used to quantify and obtain gene-level quantification of expression. We will use FeatureCounts here. Before carrying out quantification, it's important to determine the strandedness of your samples. Reach out to your sequencing facility to determine the strandedness of your samples.
 
-For workflow users -
+**For workflow users** -
 
 * Expand the featureCounts part in the workflow 
 
 * The default value under "Specify strand information" is "Unstranded" and can be changed by using the edit button next to "Specify strand information"
 
-* A Gene annotation file is required and can be uploaded by using the "Upload Data" button on the left upper hand side of the page
+* A Gene annotation file is required and can be uploaded by using the "Upload Data" button on the left upper-hand side of the page
 
-* The file should appear in the history and can then be selected from the dropdown menu of the Gene annotation file
+* The file should appear in the history and can then be selected from the dropdown menu of gene annotation file
 
 * The output format default is "Gene-ID "\t" read-count (MultiQC/DESeq2/edgeR/limma-voom compatible)" and can be edited using the edit button
 
@@ -19,7 +19,7 @@ For workflow users -
 
 
 
-For users running each step -
+**For users running each step** -
 
 * On the left-hand side of the homepage, search for "featureCounts" and open up the tool
 
@@ -27,9 +27,9 @@ For users running each step -
 
 * Depending on whether your samples were stranded or unstranded, select it from the dropdown menu
 
-* Upload a gene annotation file for the genome you are working with using the "Upload Data" button on the left upper hand side of the page
+* Upload a gene annotation file for the genome you are working with using the "Upload Data" button on the left upper-hand side of the page
 
-* The file should appear in the history and can then be selected from the dropdown menu of the Gene annotation file
+* The file should appear in the history and can then be selected from the dropdown menu of gene annotation file
 
 * Under "Output format", specify the format as "Gene-ID "\t" read-count (MultiQC/DESeq2/edgeR/limma-voom compatible)"
 
