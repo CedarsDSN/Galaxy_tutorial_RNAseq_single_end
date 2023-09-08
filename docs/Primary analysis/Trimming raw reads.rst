@@ -57,7 +57,7 @@ The output of MultiQC on Cutadapt results should contain a webpage that can be a
 
 * The first table on the webpage shows the percentage of the basepairs that have been trimmed by Cutadapt
 
-* The plot below that shows the number of reads that have been removed by Cutadapt
+* The plot below the table shows the number of reads that have been removed by Cutadapt
 
 
 You are now ready to go to the next step, Alignment/mapping
